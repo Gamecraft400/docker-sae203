@@ -39,7 +39,7 @@ header{
   background-color: gray;
 }
 
-header table{
+table{
   margin: auto;
 }
 
@@ -54,4 +54,21 @@ footer{
   background-color: gray;
   width: 100%;
   text-align: center;
+}
+
+
+
+div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+table{
+  background-color: white;
+  text-align: center;
+}
+
+table td{
+  border: 2px solid black;
 }

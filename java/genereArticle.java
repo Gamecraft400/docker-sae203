@@ -1,36 +1,32 @@
 import java.io.PrintWriter;
-import java.util.Scanner;
 import java.io.FileOutputStream;
-import java.io.FileReader;
+import java.io.File;
 
-import iut.algo.Decomposeur;
 
 
 public class genereArticle
 {
     public static void main(String[] a)
     {
-        PrintWriter pw;
-		Scanner sc;
-		Decomposeur dec;
-		FileOutputStream fos;
-		FileReader fr;
-
+		File tabFichierVideo = new File("../Ressource/VIDEO");
+		String[] tabFichier = tabFichierVideo.list();
 		try
 		{
-			fr  = new FileReader ( "infoVideo.data" );
-			sc  = new Scanner ( fr );
-			fos = new FileOutputStream("resultat.html");
-			pw = new PrintWriter(fos);
-			
-			while (sc.hasNextLine())
+			PrintWriter pw = new PrintWriter(new FileOutputStream("Resultat.html"));
+
+
+			for (int cpt = 0; cpt < tabFichier.length; cpt++)
 			{
-				dec = new Decomposeur(sc.nextLine());
-                pw.println("<li class=\"memz\">" + dec.getString(0) + "<iframe src=\"" + dec.getString(1)+ "\" title=\"YouTube video player\" frameborder=\"0\" allowfullscreen></iframe></li>");
-		    }
-		   	fr.close();
-		   	pw.close();
+				pw.println("<tr>");
+				pw.println("\t<td>" + tabFichier[cpt] + "</td>");
+				pw.println("\t<td class=\"memz\"><video controls><source src=\"../Ressource/VIDEO/" + tabFichier[cpt] + " \" type=\"video/mp4\"></video></td>");
+				pw.println("</tr>\n");
+			}
+
+				
+			pw.close();
 	    }
+		 
 	    catch (Exception e){ e.printStackTrace(); }
 
     }
