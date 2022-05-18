@@ -2,6 +2,7 @@
   margin-left: 15%;
   padding:15px;
   border-radius: 10px;
+  text-align: center;
 }
 
 input[type=text] {
@@ -23,4 +24,34 @@ input[type=text]:focus {
 
 .memz{
 display: list-item;
+}
+
+body{
+  background-image: url(./image-style/fond-Site.jpg);
+}
+
+header h1{
+  text-align: center;
+  background-color: pink;
+}
+
+header{
+  background-color: gray;
+}
+
+header table{
+  margin: auto;
+}
+
+td{
+ text-align: center;
+ 
+}
+
+footer{
+  position:fixed;
+  bottom: 0%;
+  background-color: gray;
+  width: 100%;
+  text-align: center;
 }
