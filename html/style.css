@@ -1,74 +1,104 @@
 #searchbar{
-  margin-left: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
   padding:15px;
   border-radius: 10px;
   text-align: center;
 }
 
 input[type=text] {
-   width: 30%;
-   -webkit-transition: width 0.15s ease-in-out;
-   transition: width 0.15s ease-in-out;
+   width: 40%;
 }
 
 /* When the input field gets focus,
      change its width to 100% */
-input[type=text]:focus {
-  width: 70%;
-}
+
 
 #list{
  font-size:  1.5em;
  margin-left: 90px;
 }
 
-.memz{
-display: list-item;
-}
 
 body{
-  background-image: url(./image-style/fond-Site.jpg);
+  background-image: url(./image-style/background.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0%;
+  background-color: #202124;
+
 }
 
 header h1{
   text-align: center;
-  background-color: pink;
+  background-color: #202124;
+  margin-top: 0%;
+  font-size:500%;
 }
 
 header{
-  background-color: gray;
+  background-color: #202124;
+  margin-top: 0%;
+  text-decoration: none;
+  width: 100%;
+  color : white;
+  padding-bottom: 2.5%;
 }
 
 table{
   margin: auto;
+  background-color: #202124;
 }
 
 td{
  text-align: center;
+ background-color: #202124;
  
 }
+
+
+table{
+  background-color: #202124;
+  text-align: center;
+  color: white;
+}
+
+
+
+footer div{
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  padding-top: -45%;
+  vertical-align: text-bottom;
+}
+
+.footerGauche{
+  text-align: left;
+}
+
+.footerDroite{
+  text-align: right;
+}
+
+.fantome{
+  visibility: hidden;
+}
+
+.tabFooter{
+  border: 0px;
+  font-weight:bold;
+  background-color: #202124;}
 
 footer{
   position:fixed;
   bottom: 0%;
-  background-color: gray;
+  background-color: #202124;
   width: 100%;
-  text-align: center;
+  font-size:150%;
 }
 
-
-
-div{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.nomMemz{
+  font-size:200%;
 }
-
-table{
-  background-color: white;
-  text-align: center;
-}
-
-table td{
-  border: 2px solid black;
-}
+  

@@ -8,7 +8,7 @@ RUN  apt-get update && \
 
 # Copier les fichiers de l'hôte vers l'image
 COPY ./html /var/www/html
-COPY git clone git@github.com:Gamecraft400/docker-sae203.git ./
+
 
 
 # Exposer le port 80
