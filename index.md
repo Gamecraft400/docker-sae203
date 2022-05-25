@@ -34,6 +34,7 @@ Le lien suivant vous permetra d'accéder à notre site internet via le lien http
 
 # Notre GitHub
 Nous avons travailler sur un GitHub crée par William LeFort
+![figure 2](gitHub.png "gitHub")
 
 # Notre Docker
 
