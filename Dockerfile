@@ -16,4 +16,4 @@ RUN cp -r /docker-sae203/Ressource /var/www/
 EXPOSE 80
 
 # Lancer le service apache au dÃ©marrage du conteneur
-CMD ["nginx","-g,"daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
