@@ -28,7 +28,7 @@ On peut aussi trier le format du meme pour afficher uniquement les images ou les
 
 ## Voici le rendu final :
 
-![image 1](.\Ressource\pageAcceuil.png "pageAcceuil")
+![image 1](pageAcceuil.png "pageAcceuil")
 
 Le lien suivant vous permetra d'accéder à notre site internet via le lien http://di-docker:667/
 
