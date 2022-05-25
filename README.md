@@ -46,3 +46,5 @@ docker stop findyourmemz
 ```shell
 docker rm findyourmemz
 ```
+
+Ce projet à était réaliser lors de la SAÉ 2.03 par l'équipe 27 composée de William Lefort, Malo Rihet et Gaëtan Kermarrec.
