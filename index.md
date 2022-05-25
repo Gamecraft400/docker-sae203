@@ -1,37 +1,83 @@
-## Welcome to GitHub Pages
+#  **Sae 2.03 - Compte Rendu - Équipe 27**
 
-You can use the [editor on GitHub](https://github.com/Gamecraft400/docker-sae203/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# Notre site web
+Nous avons décidés de réalisé un site permatant de trouvé un [meme](https://en.wikipedia.org/wiki/Meme).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Un meme est une image, une vidéo, un texte, etc., typiquement de nature humoristique, qui est copié et diffusé rapidement par les internautes, souvent avec de légères variations.
 
-### Markdown
+A fin de les recherchers, nous avons implémentés une barre de recherche en JavaScript.
+```JavaScript
+// JavaScript code
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+function search_memz() {
+    let input = document.getElementById('searchbar').value;
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('memz');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+```
+On peut aussi trier le format du meme pour afficher uniquement les images ou les vidéos.
 
-```markdown
-Syntax highlighted code block
+## Voici le rendu final :
 
-# Header 1
-## Header 2
-### Header 3
+![image 1](.\Ressource\pageAcceuil.png "pageAcceuil")
 
-- Bulleted
-- List
+Le lien suivant vous permetra d'accéder à notre site internet via le lien http://di-docker:667/
 
-1. Numbered
-2. List
+# Notre GitHub
+Nous avons travailler sur un GitHub crée par William LeFort
 
-**Bold** and _Italic_ and `Code` text
+# Notre Docker
 
-[Link](url) and ![Image](src)
+Nous allons vous présenté ici comment faire pour lancer notre conteneur qui fonctionne sous une image ```debian``` avec un serveur ```ngix```
+
+## Instructions pour lancer l'application :
+
+- Vérifiez si docker est installé :
+```shell
+docker --version
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+- Cloner le référentiel :
+ ```shell
+git clone git@github.com:Gamecraft400/docker-sae203.git
+```
 
-### Jekyll Themes
+- Aller au référentiel :
+```shell
+cd docker-sae203
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Gamecraft400/docker-sae203/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- Construisez l'image décrite dans dockerfile avec docker build : 
+```shell
+docker build -t img-find-your-memz .
+```
 
-### Support or Contact
+- Lancer le serveur web :
+```shell
+docker run --name findyourmemz -d -p 667:80 img-find-your-memz
+```
+- Vérifier que le conteneur associé est actif :
+```shell
+docker ps
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Finalement, arrêtez le conteneur avec la commande suivante (les dernières chiffres sont le code de hachage affiché par docker ps):
+```shell
+docker stop findyourmemz
+```
+
+- Encore, si on souhaite supprimer le conteneur, on peut taper :
+```shell
+docker rm findyourmemz
+```
+
+### Ce projet à était réaliser lors de la SAÉ 2.03 par l'équipe 27 composée de William Lefort, Malo Rihet et Gaëtan Kermarrec.
