@@ -10,7 +10,7 @@ RUN  apt-get update && \
 
 RUN git clone https://github.com/Gamecraft400/docker-sae203.git
 RUN cp -r /docker-sae203/html /var/www/
-RUN cp -r /docker-sae203/Ressource /var/www/
+
 
 # Exposer le port 80
 EXPOSE 80

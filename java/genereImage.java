@@ -8,7 +8,8 @@ public class genereImage
 {
     public static void main(String[] a)
     {
-		File tabFichierImage = new File("../Ressource/IMAGE");
+		File tabFichierImage = new File("../html/ressource/image");
+		File tabFichierVideo = new File("../html/ressource/video");
 		String[] tabFichier = tabFichierImage.list();
 		try
 		{
@@ -19,10 +20,19 @@ public class genereImage
 			{
 				pw.println("<tr>");
 				pw.println("\t<td class=\"memz\">" + tabFichier[cpt] + "</td>");
-				pw.println("\t<td class=\"memz\"><img src=\"../Ressource/IMAGE/" + tabFichier[cpt] + "\"></td>");
+				pw.println("\t<td class=\"memz\"><img src=\"../html/ressource/image/" + tabFichier[cpt] + "\"></td>");
 				pw.println("</tr>\n");
 			}
 
+			tabFichier = tabFichierVideo.list();
+
+			for (int cpt = 0; cpt < tabFichier.length; cpt++)
+			{
+				pw.println("<tr>");
+				pw.println("\t<td class=\"memz\">" + tabFichier[cpt] + "</td>");
+				pw.println("\t<td class=\"memz\"><video controls><source src=\"../html/ressource/video/" + tabFichier[cpt] + " \" type=\"video/mp4\"></video></td>");
+				pw.println("</tr>\n");
+			}
 				
 			pw.close();
 	    }
